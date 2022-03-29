@@ -524,19 +524,9 @@ a {
 
 .tea__images {
   margin-left: 8.5%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.tea__img {
-  display: block;
-  min-width: 200px;
-  max-width: 320px;
-}
-
-.tea__img:not(:last-child) {
-  margin-right: 20px;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 320px));
+  gap: 20px;
 }
 
 .tea__img img {
@@ -956,6 +946,7 @@ a {
   }
 
   .tea__images {
+    grid-template-columns: repeat(2, minmax(auto, 300px));
     margin-left: 0;
     margin-top: 20px;
   }
